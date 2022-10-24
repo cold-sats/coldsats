@@ -57,6 +57,12 @@ export class AppComponent implements OnInit {
           url: 'https://github.com/cold-sats/ln-charts'
         },
         {
+          title: 'tao-web',
+          description: 'tao-web is a Bitcoin wallet that utilizes the tao-wallet npm package to let you swap bitcoin between Bitcoin USD.',
+          image: 'assets/images/tao-web.svg',
+          url: 'https://github.com/cold-sats/tao-web'
+        },
+        {
           title: 'coldsats.io',
           description: 'I built this website as a home for my Bitcoin related projects and articles. Check back in the future to see where I go with this.',
           image: 'assets/images/cold-sats.svg',
