@@ -1,61 +1,38 @@
-<div *ngIf="layout == 'desktop'">
-  <div class="desktop-white-background">
-    <div class="desktop-page-title">
-      COLD SATS
-    </div>
-    <div class="desktop-page-subtitle">
-      My name is Red and I run the Lightning node Cold Sats. I like to code, write and share.
-    </div>
-  </div>
-  <div class="content-container">
-    <div *ngFor="let section of getSections(); let first = first">
-      <div class="desktop-section-title" [ngStyle]="first ? {'padding-top': '10px'} : {'padding-top': '30px'}">
-        {{section.title}}
-      </div>
-      <div *ngFor="let card of section.cards; let f = first">
-        <a [href]="card.url" target="_blank" class="button-container link" [ngStyle]="f ? {'margin-top': '10px'} : {'margin-top': '20px'}">
-          <img class="desktop-image" [src]="card.image">
-          <div class="desktop-title-description-container">
-            <div class="desktop-title">
-              {{card.title}}
-            </div>
-            <div class="desktop-header">
-              {{card.description}}
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+<sats-nav>
+</sats-nav>
 
-<div *ngIf="layout == 'mobile'">
-  <div class="mobile-white-background">
-    <div class="mobile-page-title">
-      COLD SATS
+<div style="padding-top: 70px">
+  <div *ngFor="let image of data.shownImages; let index = index">
+    <div *ngIf="index%2 == 0 && data.view == 'tiles-1'" style="display: flex; width: 100%">
+      <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
     </div>
-    <div class="mobile-page-subtitle">
-      My name is Red and I run the Lightning node Cold Sats. I like to code, write and share.
+    <div *ngIf="index%3 == 0 && data.view == 'tiles-2'" style="display: flex; width: 100%">
+      <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
     </div>
-  </div>
-  <div class="content-container">
-    <div *ngFor="let section of getSections(); let first = first">
-      <div class="mobile-section-title" [ngStyle]="first ? {'padding-top': '5px'} : {'padding-top': '30px'}">
-        {{section.title}}
-      </div>
-      <div *ngFor="let card of section.cards; let f = first">
-        <a [href]="card.url" target="_blank" class="link mobile-content-container">
-          <div class="mobile-title-description-container" [ngStyle]="f ? {'margin-top': '10px'} : {'margin-top': '20px'}">
-            <a *ngIf="card.image" [href]="card.url" target="_blank"><img class="mobile-image" [src]="card.image"></a>
-            <div class="mobile-title" style="padding-top:4px">
-              {{card.title}}
-            </div>
-          </div>
-          <div class="mobile-header">
-            {{card.description}}
-          </div>
-        </a>
-      </div>
+    <div *ngIf="index%6 == 0 && data.view == 'tiles-3'" style="display: flex; width: 100%">
+      <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+3]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+4]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+5]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+    </div>
+    <div *ngIf="index%12 == 0 && data.view == 'tiles-4'" style="display: flex; width: 100%">
+      <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+3]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+4]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+5]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+6]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+7]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+8]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+9]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+10]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+11]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
     </div>
   </div>
 </div>

@@ -1,0 +1,251 @@
+.desktop-nav-container {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  text-align: center;
+  background: white;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.24);
+  z-index: 1;
+}
+
+.filter-menu {
+  display: block;
+  position: fixed;
+  top: 70px;
+  right: 0px;
+  background: white;
+  width: 220px;
+  height: 100%;
+  z-index: 1;
+  border-top: 1px solid #CBCBCB;
+  padding: 15px;
+  text-align: left;
+}
+
+
+.desktop-title-container {
+  padding-top: 80px;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -25px;
+}
+
+.logo {
+  height: 30px;
+  padding: 17px 5px 0px 15px;
+  cursor: pointer;
+  &:hover {
+    animation: wiggle 1.5s;
+    animation-direction: normal;
+  }
+}
+
+@keyframes wiggle {
+  10%, 90% {
+    transform: translate(-1px, 0);
+  }
+
+  20%, 80% {
+    transform: translate(2px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate(-4px, 0);
+  }
+
+  40%, 60% {
+    transform: translate(4px, 0);
+  }
+}
+
+.tiles-image {
+  height: 35px;
+  padding: 15px 13px 0px 0px;
+  cursor: pointer;
+  &:hover {
+    opacity: 80%;
+  }
+}
+
+.filter-image {
+  height: 45px;
+  padding: 10px 20px 0px 0px;
+  cursor: pointer;
+  &:hover {
+    opacity: 80%;
+  }
+}
+
+.filter-icon {
+  height: 30px;
+  margin-bottom: -4px;
+}
+
+.arrow-icon {
+  height: 15px;
+  margin-bottom: -4px;
+  margin-left: 150px
+}
+
+.desktop-padding {
+  padding: 13px 60px 0px 0px;
+}
+
+.desktop-back-button-container {
+  margin: auto;
+  text-align: center;
+}
+
+.desktop-title {
+  display: inline;
+  font: 27px Avenir, serif;
+  font-weight: 300;
+  line-height: 13px;
+  color: white;
+  line-height: 35px;
+}
+
+.desktop-back-button {
+  cursor: pointer;
+  &:hover {
+    opacity: 70%;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
+  }
+}
+
+.desktop-back-button-image {
+  height: 20px;
+  width: 20px;
+}
+
+.mobile-nav-container {
+  position: fixed;
+  bottom: 0px;
+  margin: auto;
+  text-align: center;
+  background: black;
+  width: 100%;
+  height: 70px;
+}
+.mobile-nav-container {
+  position: fixed;
+  bottom: 0px;
+  margin: auto;
+  text-align: center;
+  background: black;
+  width: 100%;
+  height: 70px;
+}
+
+.mobile-title-container {
+  position: fixed;
+  top: 0px;
+  margin: auto;
+  text-align: center;
+  background: black;
+  width: 100%;
+  height: 60px;
+}
+
+.mobile-title-text-container {
+  display: inline;
+  font: 27px Avenir, serif;
+  font-weight: 300;
+  line-height: 13px;
+  color: white;
+  line-height: 35px;
+}
+
+.mobile-title {
+  display: inline;
+  font: 27px Avenir, serif;
+  font-weight: 300;
+  line-height: 13px;
+  color: white;
+  line-height: 35px;
+}
+
+.mobile-title-margin {
+  margin-top: 12px;
+  margin-bottom: -30px;
+  margin-left: -20px;
+}
+
+.mobile-back-button-icon {
+  height: 20px;
+  width: 20px;
+  margin-left: 15px;
+}
+
+.mobile-tao-logo {
+  position: fixed;
+  top: 8px;
+  height: 25px;
+  float: left;
+  padding: 8px 5px 0px 12px;
+  cursor: pointer;
+}
+
+.mobile-back-button {
+  position: fixed;
+  left: 0px;
+  cursor: pointer;
+  &:hover {
+    opacity: 70%;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
+  }
+}
+
+.mobile-back-icon {
+  height: 20px;
+  width: 20px;
+  margin-left: 15px;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.margin-left-70 {
+  margin-left: 70px;
+}
+
+.menu-item {
+  cursor: pointer;
+  height: 30px;
+  &:hover {
+    opacity: 70%;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
+  }
+}
+
+.bottom-menu-item {
+  cursor: pointer;
+  height: 30px;
+  &:hover {
+    opacity: 70%;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
+  }
+}
+
+.margin-left-8 {
+  margin-left: 8%;
+}
+
+.margin-right-8 {
+  margin-right: 8%;
+}
+
+.margin-right-80 {
+  margin-right: 80px;
+}
+
+.filter-row {
+  cursor: pointer !important;
+  padding-bottom: 10px !important;
+}
