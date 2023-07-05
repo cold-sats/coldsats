@@ -37,6 +37,7 @@ export class DataProvider  {
   }
 
   async searchForImage(search) {
+    console.log(this.allImages)
     let chosenTrait = null;
     if (this.isSearching) {
       return;
@@ -59,7 +60,8 @@ export class DataProvider  {
       }
       image.data.howrare.attributes.map((attribute) => {
         if (!chosenTrait || chosenTrait.toUpperCase() == attribute.name.toUpperCase()) {
-          if (search.toUpperCase() == attribute.value.toUpperCase()) {
+          if (search.toUpperCase() == attribute.value.toUpperCase() && !this.shownImages.includes(image)) {
+            console.log(attribute)
             this.shownImages.push(image);
           }
         }

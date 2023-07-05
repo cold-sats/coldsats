@@ -37,13 +37,11 @@ export class AppComponent implements OnInit {
     } else {
       this.maxWidth =  window.innerWidth / 12 - 11.2 + 'px';
     }
-    console.log(this.maxWidth)
   }
 
   async ngOnInit() {
     this.data.addCollectionDataToImages();
     this.data.view = 'tiles-2';
-    console.log(this.data.shownImages)
     this.setUpAnalytics();
     this.responsive.observe('(min-width: 550px)')
       .subscribe(result => {
@@ -54,7 +52,6 @@ export class AppComponent implements OnInit {
         }
       });
       console.log(this.data.shownImages.length)
-
   }
 
   @HostListener('window:resize')

@@ -54,7 +54,7 @@ export class NavComponent implements OnInit {
         if (result.matches) {
           this.navLocation = 'top';
         } else {
-          this.navLocation = 'bottom';
+          this.navLocation = 'top';
         }
       });
       this.form.valueChanges.pipe(
