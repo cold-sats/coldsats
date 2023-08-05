@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
 
   getMaxWidth() {
     if (this.data.view == 'tiles-1') {
-      this.maxWidth =  window.innerWidth / 2 + 'px';
+      this.maxWidth =  window.innerWidth / 2 - 18 + 'px';
     } else if (this.data.view == 'tiles-2') {
       this.maxWidth =  window.innerWidth / 3 - 15 + 'px';
     } else if (this.data.view == 'tiles-3') {

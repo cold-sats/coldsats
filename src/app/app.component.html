@@ -5,34 +5,34 @@
   <div *ngFor="let image of data.shownImages; let index = index">
     <div *ngIf="index%2 == 0 && data.view == 'tiles-1'" style="display: flex; width: 100%">
       <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+1]?.src">
     </div>
     <div *ngIf="index%3 == 0 && data.view == 'tiles-2'" style="display: flex; width: 100%">
       <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+1]?.src">
+      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+2]?.src">
     </div>
     <div *ngIf="index%6 == 0 && data.view == 'tiles-3'" style="display: flex; width: 100%">
       <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+3]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+4]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+5]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+1]?.src">
+      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+2]?.src">
+      <img [src]="data.shownImages[index+3]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+3]?.src">
+      <img [src]="data.shownImages[index+4]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+4]?.src">
+      <img [src]="data.shownImages[index+5]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+5]?.src">
     </div>
     <div *ngIf="index%12 == 0 && data.view == 'tiles-4'" style="display: flex; width: 100%">
       <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+3]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+4]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+5]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+6]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+7]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+8]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+9]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+10]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+11]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
+      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+1]?.src">
+      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+2]?.src">
+      <img [src]="data.shownImages[index+3]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+3]?.src">
+      <img [src]="data.shownImages[index+4]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+4]?.src">
+      <img [src]="data.shownImages[index+5]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+5]?.src">
+      <img [src]="data.shownImages[index+6]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+6]?.src">
+      <img [src]="data.shownImages[index+7]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+7]?.src">
+      <img [src]="data.shownImages[index+8]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+8]?.src">
+      <img [src]="data.shownImages[index+9]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+9]?.src">
+      <img [src]="data.shownImages[index+10]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+10]?.src">
+      <img [src]="data.shownImages[index+11]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+11]?.src">
     </div>
   </div>
 </div>

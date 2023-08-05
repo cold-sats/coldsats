@@ -21,6 +21,7 @@ import { data } from 'src/data/data'
 
 export class NavComponent implements OnInit {
 
+  dimensions: string;
   filters: any;
   test: boolean;
   form: UntypedFormGroup;
@@ -53,9 +54,9 @@ export class NavComponent implements OnInit {
     this.responsive.observe('(min-width: 650px)')
       .subscribe(result => {
         if (result.matches) {
-          this.navLocation = 'top';
+          this.dimensions = 'desktop';
         } else {
-          this.navLocation = 'top';
+          this.dimensions = 'mobile';
         }
       });
       this.form.valueChanges.pipe(

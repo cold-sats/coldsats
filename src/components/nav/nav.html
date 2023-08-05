@@ -1,8 +1,7 @@
-<ng-container *ngIf="navLocation == 'top'">
 
   <div class="desktop-nav-container" (click)="chooseOneRandomABC()">
     <div class="menu-buttons">
-      <img src="assets/images/cold-sats.png" class="logo">
+      <img src="assets/images/cold-sats.png" class="logo" *ngIf="dimensions == 'desktop'">
       <div style="margin-left: auto;">
         <img [src]="'assets/images/tiles.png'" class="tiles-image" (click)="toggleView()">
       </div>
@@ -33,24 +32,3 @@
         class="desktop-back-button-image">
     </a>
   </div>
-
-</ng-container>
-
-<ng-container *ngIf="navLocation == 'bottom'">
-
-  <div class="mobile-nav-container" *ngIf="!hideMenuButtons">
-
-  </div>
-
-  <div class="mobile-title-container">
-    <div class="centered-input-mobile">
-      <sats-input
-        formControlName="search"
-        [form]="form.controls['search']"
-        [label]="'Search'"
-        [icon]="'assets/images/search.png'">
-      </sats-input>
-    </div>
-  </div>
-
-</ng-container>
