@@ -10,6 +10,8 @@ import { filters } from 'src/components/nav/filters'
 
 import { AppComponent } from 'src/app/app.component';
 
+import { data } from 'src/data/data'
+
 @Component({
   selector: 'sats-nav',
   encapsulation: ViewEncapsulation.None,
@@ -45,7 +47,6 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     this.selectedFilters = [];
     this.filters = filters;
-    console.log(this.filters.length)
     this.test = true;
     this.data.view = 'tiles-2';
     this.currentPage = this.router.routerState.snapshot.url;
@@ -102,8 +103,17 @@ export class NavComponent implements OnInit {
     this.filters[index]['showExpandedFilter'] = !this.filters[index]['showExpandedFilter']
   }
 
-  df(test) {
-    console.log(test)
+  chooseOneRandomABC() {
+    let allABCs = [];
+    Object.keys(data).forEach((key) => {
+      allABCs.push({
+        data: data[key]
+      });
+    });
+    console.log('Total number of ABCs: ' + allABCs.length)
+    const chosenABC = Math.floor(Math.random() * 10000) + 1;
+    console.log(allABCs[chosenABC].data.howrare.name);
+    console.log(allABCs[chosenABC].data.ordinal_img_url);
   }
 
 }

@@ -1,23 +1,23 @@
 <ng-container *ngIf="navLocation == 'top'">
 
-  <div class="desktop-nav-container">
-    <form [formGroup]="form" novalidate action="#" >
-      <div class="menu-buttons">
-        <img src="assets/images/cold-sats.png" class="logo">
-        <div style="margin-left: auto;">
-          <img [src]="'assets/images/tiles.png'" class="tiles-image" (click)="toggleView()">
-        </div>
+  <div class="desktop-nav-container" (click)="chooseOneRandomABC()">
+    <div class="menu-buttons">
+      <img src="assets/images/cold-sats.png" class="logo">
+      <div style="margin-left: auto;">
+        <img [src]="'assets/images/tiles.png'" class="tiles-image" (click)="toggleView()">
       </div>
-    </form>
+    </div>
   </div>
 
   <div class="centered-input">
-    <sats-input
-      formControlName="search"
-      [form]="form.controls['search']"
-      [label]="'Search'"
-      [icon]="'assets/images/search.png'">
-    </sats-input>
+    <form [formGroup]="form" novalidate action="#" >
+      <sats-input
+        formControlName="search"
+        [form]="form.controls['search']"
+        [label]="'Search'"
+        [icon]="'assets/images/search.png'">
+      </sats-input>
+    </form>
   </div>
 
   <div class="desktop-back-button-container">
