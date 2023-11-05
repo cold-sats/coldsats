@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
     private responsive: BreakpointObserver,
     private router: Router
   ) {
-    this.data.view = 'tiles-2';
+    this.data.view = 'tiles-3';
     this.getMaxWidth();
   }
 
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
 
   async ngOnInit() {
     this.data.addCollectionDataToImages();
-    this.data.view = 'tiles-2';
+    this.data.view = 'tiles-3';
     this.setUpAnalytics();
     this.responsive.observe('(min-width: 550px)')
       .subscribe(result => {

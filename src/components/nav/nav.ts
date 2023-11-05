@@ -49,7 +49,7 @@ export class NavComponent implements OnInit {
     this.selectedFilters = [];
     this.filters = filters;
     this.test = true;
-    this.data.view = 'tiles-2';
+    this.data.view = 'tiles-3';
     this.currentPage = this.router.routerState.snapshot.url;
     this.responsive.observe('(min-width: 650px)')
       .subscribe(result => {

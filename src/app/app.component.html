@@ -1,24 +1,112 @@
-<sats-nav>
+<sats-nav style="position: relative; z-index: 1;">
 </sats-nav>
 
 <div style="padding-top: 70px">
   <div *ngFor="let image of data.shownImages; let index = index">
-    <div *ngIf="index%2 == 0 && data.view == 'tiles-1'" style="display: flex; width: 100%">
-      <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+1]?.src">
+    <div *ngIf="index%2 == 0 && data.view == 'tiles-1'" style="display: flex; width: 100%; margin-bottom: -5px">
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()">
+        <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{image.data.howrare.rank}}
+        </div>
+      </div>
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()" *ngIf="data.shownImages[index+1]?.src">
+        <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{data.shownImages[index+1].data.howrare.rank}}
+        </div>
+      </div>
     </div>
-    <div *ngIf="index%3 == 0 && data.view == 'tiles-2'" style="display: flex; width: 100%">
-      <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+1]?.src">
-      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+2]?.src">
+    <div *ngIf="index%3 == 0 && data.view == 'tiles-2'" style="display: flex; width: 100%; margin-bottom: -5px">
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()">
+        <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{image.data.howrare.rank}}
+        </div>
+      </div>
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()" *ngIf="data.shownImages[index+1]?.src">
+        <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{data.shownImages[index+1].data.howrare.rank}}
+        </div>
+      </div>
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()" *ngIf="data.shownImages[index+1]?.src">
+        <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{data.shownImages[index+2].data.howrare.rank}}
+        </div>
+      </div>
     </div>
-    <div *ngIf="index%6 == 0 && data.view == 'tiles-3'" style="display: flex; width: 100%">
-      <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">
-      <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+1]?.src">
-      <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+2]?.src">
-      <img [src]="data.shownImages[index+3]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+3]?.src">
-      <img [src]="data.shownImages[index+4]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+4]?.src">
-      <img [src]="data.shownImages[index+5]?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;" *ngIf="data.shownImages[index+5]?.src">
+    <div *ngIf="index%6 == 0 && data.view == 'tiles-3'" style="display: flex; width: 100%; margin-bottom: -5px">
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()">
+        <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{image.data.howrare.rank}}
+        </div>
+      </div>
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()" *ngIf="data.shownImages[index+1]?.src">
+        <img [src]="data.shownImages[index+1]?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{data.shownImages[index+1].data.howrare.rank}}
+        </div>
+      </div>
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()" *ngIf="data.shownImages[index+1]?.src">
+        <img [src]="data.shownImages[index+2]?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{data.shownImages[index+2].data.howrare.rank}}
+        </div>
+      </div>
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()" *ngIf="data.shownImages[index+1]?.src">
+        <img [src]="data.shownImages[index+3]?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{data.shownImages[index+3].data.howrare.rank}}
+        </div>
+      </div>
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()" *ngIf="data.shownImages[index+1]?.src">
+        <img [src]="data.shownImages[index+4]?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{data.shownImages[index+4].data.howrare.rank}}
+        </div>
+      </div>
+      <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()" *ngIf="data.shownImages[index+1]?.src">
+        <img [src]="data.shownImages[index+5]?.src" [ngStyle]="{'max-width': maxWidth}" style="width: 100%; height: auto;">
+        <div
+          *ngIf="data?.showRarity"
+          style="font-size: 12px; position: absolute; bottom: 0; right: 0; background: black; color: white; text-align: right; padding: 2px 10px 2px 10px; margin: 0px 10px 15px 0px; border-radius: 40px;">
+          <img src="assets/images/howrare.svg" style="width:8px">
+          {{data.shownImages[index+5].data.howrare.rank}}
+        </div>
+      </div>
     </div>
     <div *ngIf="index%12 == 0 && data.view == 'tiles-4'" style="display: flex; width: 100%">
       <img [src]="image?.src" [ngStyle]="{'max-width': maxWidth}" style="flex: 1; padding: 5px; height: auto;">

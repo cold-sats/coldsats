@@ -11,6 +11,7 @@ export class DataProvider  {
   isSearching: boolean;
   view: any;
   showFilterMenu: boolean;
+  showRarity: boolean = true;
   maxWidth: any;
 
   constructor() {
@@ -68,6 +69,10 @@ export class DataProvider  {
       });
     });
     this.isSearching = false;
+  }
+
+  toggleRarity() {
+    this.showRarity = !this.showRarity;
   }
 
 }
