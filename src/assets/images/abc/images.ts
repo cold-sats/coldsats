@@ -17,8 +17,16 @@ export const images = [
     abcNumber: 7409
   },
   {
+    src: 'assets/images/abc/6855.webp',
+    abcNumber: 6855
+  },
+  {
     src: 'assets/images/abc/abc3.webp',
     abcNumber: 1727
+  },
+  {
+    src: 'assets/images/abc/3382.webp',
+    abcNumber: 3382
   },
   {
     src: 'assets/images/abc/abc6.webp',
