@@ -1,7 +1,7 @@
 <sats-nav style="position: relative; z-index: 1;">
 </sats-nav>
 
-<div style="padding-top: 70px">
+<div style="padding-top: 67px">
   <div *ngFor="let image of data.shownImages; let index = index">
     <div *ngIf="index%2 == 0 && data.view == 'tiles-1'" style="display: flex; width: 100%; margin-bottom: -5px">
       <div style="position: relative; flex: 1; padding: 5px; cursor: pointer" (click)="data.toggleRarity()">
